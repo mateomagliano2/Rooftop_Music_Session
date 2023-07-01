@@ -23,13 +23,11 @@
 
                 <strong>{{ valorEncontrados.id}} </strong>  
                 <br>
+                <strong>{{ valorEncontrados["artist-credit"][0].name}} </strong> 
+                <br>
                 <strong>{{ valorEncontrados.length/1000}} </strong>  
-                
-                
-
-               
-    </p>              
-    
+             
+    </p>                  
   </div>
 </div>
 
@@ -50,7 +48,9 @@ export default {
     data(){
         return{
             info: "",
-            valorEncontrado: null 
+            valorEncontrado: null, 
+
+            nombreArtista:""
            
         }
     },
@@ -62,8 +62,9 @@ export default {
             .then(response=> {
                console.log(response)
 
-                this.valorEncontrado = response.data.recordings
-              
+                this.valorEncontrado = response.data.recordings;
+               
+               
 
 
             })

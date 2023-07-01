@@ -36,7 +36,11 @@ export default {
 </script>
 
 <style>
-#app {
-  background-color: rgb(130, 134, 134);
-}
+  body{
+    background-color: black;
+  }
+  #app {
+
+    background-color: rgb(244, 244, 245); 
+  }
 </style>
