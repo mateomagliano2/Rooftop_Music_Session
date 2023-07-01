@@ -1,15 +1,43 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+
+  <BuscadorCanciones>
+    
+  </BuscadorCanciones>
+
+
+  
+  
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import BuscadorCanciones from './components/BuscadorCanciones.vue'
+
+const axios = require('axios');
+
+// Make a request for a user with a given ID
+axios.get('https://musicbrainz.org/ws/2/recording?fmt=json&query=under%20the%20bridge')
+  .then(function (response) {
+    // handle success
+    console.log(response);
+
+  })
+  .catch(function (error) {
+    // handle error
+    console.log(error);
+  })
+  .finally(function () {
+    // always executed
+  });
+
+
 
 export default {
+
+  
   name: 'App',
   components: {
-    HelloWorld
+
+    BuscadorCanciones
   }
 }
 </script>
