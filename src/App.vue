@@ -1,8 +1,17 @@
 <template>
-
-  <BuscadorCanciones>
+  <div class="container">
+    <BuscadorCanciones>
     
-  </BuscadorCanciones>
+    </BuscadorCanciones>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+
+      Eveniet molestias blanditiis accusamus explicabo aspernatur 
+      omnis ullam consectetur fuga alias impedit, eligendi sit id 
+      voluptas aliquam. Culpa laborum aliquam totam nobis?
+    </p>
+  </div>
+
 
 
   
@@ -44,11 +53,6 @@ export default {
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  background-color: rgb(130, 134, 134);
 }
 </style>
