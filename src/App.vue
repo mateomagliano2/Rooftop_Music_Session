@@ -42,5 +42,11 @@ export default {
   #app {
 
     background-color: rgb(244, 244, 245); 
+   
   }
+  .container{
+  align-items: center;
+   text-align: center;
+  }
+  
 </style>

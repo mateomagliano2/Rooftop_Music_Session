@@ -23,7 +23,10 @@
 
                 <strong>{{ valorEncontrados.id}} </strong>  
                 <br>
-                <strong>{{ valorEncontrados["artist-credit"][0].name}} </strong> 
+                <a @click="discografiaArtista(valorEncontrados['artist-credit'][0].artist.id )" href="#"><strong>{{ valorEncontrados["artist-credit"][0].name}} </strong> 
+                <br>
+                {{  valorEncontrados["artist-credit"][0].artist.id }}
+                </a>
                 <br>
                 <strong>{{ valorEncontrados.length/1000}} </strong>  
              
@@ -50,7 +53,8 @@ export default {
             info: "",
             valorEncontrado: null, 
 
-            nombreArtista:""
+            nombreArtista:"",
+            artistaId:"",
            
         }
     },
@@ -63,7 +67,7 @@ export default {
                console.log(response)
 
                 this.valorEncontrado = response.data.recordings;
-               
+                this.artistaId
                
 
 
@@ -76,7 +80,29 @@ export default {
                 // always executed
             });
 
-        }
+        },
+        discografiaArtista(artistaId){
+            const query = `https://musicbrainz.org/ws/2/release?artist=${artistaId}&fmt=json&type=album`
+         axios.get(query)
+            .then(response=> {
+               console.log(response)
+               console.log(query)
+                
+                
+               
+
+
+            })
+            .catch(function (error) {
+                // handle error
+                console.log(error);
+            })
+            .finally(function () {
+                // always executed
+            });
+
+
+        }      
 
 
 
