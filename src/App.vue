@@ -3,13 +3,7 @@
     <BuscadorCanciones>
     
     </BuscadorCanciones>
-    <p>
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-
-      Eveniet molestias blanditiis accusamus explicabo aspernatur 
-      omnis ullam consectetur fuga alias impedit, eligendi sit id 
-      voluptas aliquam. Culpa laborum aliquam totam nobis?
-    </p>
+   
   </div>
 
 
